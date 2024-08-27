@@ -19,8 +19,6 @@ if (File.Exists(filename))
 else
 {
     Console.WriteLine("File does not exist");
-    using (StreamWriter writer = File.CreateText(filename))
-    {
-        writer.WriteLine("This is a test of creating a file");
-    }
+    using StreamWriter writer = File.CreateText(filename);
+    writer.WriteLine("This is a test of creating a file");
 }
